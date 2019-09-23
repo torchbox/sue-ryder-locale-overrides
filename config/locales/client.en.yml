@@ -1,0 +1,6 @@
+en:
+  js:
+    user:
+      username:
+        title: "Username"
+        instructions: "Public, no spaces, short"
