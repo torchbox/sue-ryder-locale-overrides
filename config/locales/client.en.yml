@@ -3,4 +3,4 @@ en:
     user:
       username:
         title: "Username"
-        instructions: "Public, no spaces, short"
+        instructions: "Your public screen name (no spaces, short)"
