@@ -4,3 +4,6 @@ en:
       username:
         title: "Username"
         instructions: "Your public screen name (no spaces, short)"
+    faq: "Community Guidelines"
+    tos: "Terms & Conditions"
+    privacy: "Help"
