@@ -1,8 +1,11 @@
 # name: sueryder-locale-overrides
 # about: Provides overrides to locale configuration
-# version: 0.0.4
+# version: 0.0.5
 # authors: Alex Bridge
 
 after_initialize do
-  ApplicationController.prepend_view_path("plugins/sue-ryder-locale-overrides/app/views")
+  begin
+    ApplicationController.prepend_view_path("plugins/locale-overrides/app/views")
+  rescue
+  end
 end
