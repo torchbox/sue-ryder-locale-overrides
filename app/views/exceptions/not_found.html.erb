@@ -2,8 +2,14 @@
 
 <p>That page doesn't exist or is private.
 <%- if current_user.nil? %>
-  You may need to <a href='/login'>log in</a> to see it.
+  You may need to <a href='/login' class="login-button">log in</a> to see it.
 <%- end %>
+
+  <%- if @group&.allow_membership_requests %>
+    <br/><a href="<%= group_path @group.name %>" class='btn btn-primary'><%= SvgSprite.raw_svg('user-plus') %> <%= I18n.t('not_in_group.request_membership') %></a>
+  <%- elsif @group&.public_admission %>
+    <br/><a href="<%= group_path @group.name %>" class='btn btn-primary'><%= SvgSprite.raw_svg('user-plus') %> <%= I18n.t('not_in_group.join_group') %></a>
+  <%- end %>
 </p>
 
 <%= build_plugin_html 'server:not-found-before-topics' %>
